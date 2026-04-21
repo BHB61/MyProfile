@@ -73,7 +73,7 @@ function HeroCard() {
       </div>
 
       <div className="contact-list">
-        <div><MapPin size={16} /> Nürtingen / Stuttgart</div>
+        <div><MapPin size={16} /> Nufringen / Stuttgart</div>
         <div><Mail size={16} /> burak61beder61@gmail.com</div>
         <div><Phone size={16} /> 0176 83003322</div>
         <div>GitHub: BHB61</div>
@@ -221,7 +221,7 @@ export default function App() {
               </a>
               <a
                 className="button button-secondary"
-                href="https://mghstuttgart.com"
+                href="https://mhgstuttgart.com"
                 target="_blank"
                 rel="noreferrer"
               >
