@@ -21,7 +21,7 @@ function HeroCard() {
       <div className="hero-card-top">
         <div>
           <h3>Burak Hakki Beder</h3>
-          <p>Fullstack Developer · IT-Student</p>
+          <p>IT-Student · Cloud & DevOps Enthusiast</p>
         </div>
         <span className="status-badge">Offen für Werkstudentenstellen</span>
       </div>
@@ -41,16 +41,17 @@ function HeroCard() {
         </div>
         <div>
           <Globe size={16} />
-          <span>GitHub: BHB61</span>
+          <span>GitHub / GitLab: BHB61</span>
         </div>
       </div>
 
       <div className="hero-card-divider" />
 
       <p className="hero-card-text">
-        Ich kombiniere Studium, praktische Entwicklung und moderne Webtechnologien
-        mit Fokus auf React, APIs, Cloud-Themen und Systemverständnis rund um
-        Linux- und Windows-Umgebungen.
+        Ich interessiere mich besonders für Cloud-Technologien, DevOps und die
+        Automatisierung von Entwicklungs- und Deployment-Prozessen. Aktuell
+        vertiefe ich mein Wissen in Docker, GitLab CI/CD, Terraform und
+        Microsoft Azure durch eigene Praxisprojekte.
       </p>
     </div>
   );
@@ -99,7 +100,9 @@ function TechCard({ group }) {
         </div>
         <div>
           <h3>{group.title}</h3>
-          {group.description && <p className="tech-description">{group.description}</p>}
+          {group.description && (
+            <p className="tech-description">{group.description}</p>
+          )}
         </div>
       </div>
 
@@ -170,7 +173,9 @@ export default function App() {
         <div className="container header-inner">
           <div>
             <div className="brand-name">Burak Hakki Beder</div>
-            <div className="brand-subtitle">IT-Student · Fullstack Developer</div>
+            <div className="brand-subtitle">
+              IT-Student · Cloud & DevOps Enthusiast
+            </div>
           </div>
 
           <nav className="main-nav">
@@ -188,13 +193,20 @@ export default function App() {
         <section className="hero-section">
           <div className="container hero-grid">
             <div>
-              <div className="hero-badge">HFT Stuttgart · 3. Semester</div>
-              <h1>Moderne Webanwendungen mit React, APIs, AWS und technischem Systemverständnis</h1>
+              <div className="hero-badge">
+                HFT Stuttgart · Cloud · DevOps · Automatisierung
+              </div>
+
+              <h1>
+                Cloud, DevOps und Infrastrukturautomatisierung mit Docker,
+                Terraform und Azure
+              </h1>
 
               <p className="hero-text">
-                Ich entwickle moderne, responsive Webanwendungen und bringe
-                zusätzlich Erfahrung in Cloud-Grundlagen, Linux-Arbeit,
-                Windows-Konfigurationen sowie produktivem Arbeiten mit digitalen Tools mit.
+                Ich beschäftige mich mit Cloud-Plattformen, Infrastructure as
+                Code, Containerisierung und CI/CD-Pipelines. Mein Ziel ist es,
+                moderne Entwicklungs- und Deployment-Prozesse zu verstehen und
+                praktisch umzusetzen.
               </p>
 
               <div className="hero-actions">
@@ -215,8 +227,8 @@ export default function App() {
           <div className="container">
             <SectionIntro
               eyebrow="Projekte"
-              title="Einblicke in meine praktische Arbeit"
-              text="Ausgewählte Arbeiten und technische Themen, an denen ich bereits praktisch gearbeitet habe."
+              title="Praxisprojekte mit Cloud-, DevOps- und Web-Technologien"
+              text="Ausgewählte Projekte, mit denen ich moderne Entwicklungsprozesse, Automatisierung, Containerisierung und Cloud-Grundlagen praktisch umgesetzt habe."
             />
 
             <div className="project-grid">
@@ -232,7 +244,7 @@ export default function App() {
             <SectionIntro
               eyebrow="Skills"
               title="Technologien, Tools und Systeme"
-              text="Mein Stack umfasst Webentwicklung, Backend-Grundlagen, Cloud-Themen sowie produktive und systemnahe Arbeit mit Office-, Linux- und Windows-Umgebungen."
+              text="Mein Schwerpunkt liegt aktuell auf Cloud- und DevOps-Technologien. Dazu gehören Docker, GitLab CI/CD, Terraform, Azure sowie die Automatisierung von Build-, Test- und Deployment-Prozessen."
             />
 
             <div className="tech-grid">
@@ -248,12 +260,15 @@ export default function App() {
             <SectionIntro
               eyebrow="Zertifikate"
               title="Weiterbildungen und Nachweise"
-              text="Ausgewählte Zertifikate aus den Bereichen Business English, Artificial Intelligence sowie AWS & DevOps."
+              text="Ausgewählte Zertifikate und Weiterbildungen aus den Bereichen Business English, Artificial Intelligence, Cloud Computing und DevOps."
             />
 
             <div className="certificate-grid">
               {certificates.map((certificate) => (
-                <CertificateCard key={certificate.title} certificate={certificate} />
+                <CertificateCard
+                  key={certificate.title}
+                  certificate={certificate}
+                />
               ))}
             </div>
           </div>
@@ -263,8 +278,8 @@ export default function App() {
           <div className="container">
             <SectionIntro
               eyebrow="Über mich"
-              title="Studium und Entwicklungspraxis"
-              text="Ich baue mein Profil gezielt an der Schnittstelle zwischen Softwareentwicklung, Webtechnologien und praktischer IT-Erfahrung aus."
+              title="Studium, Entwicklungspraxis und DevOps-Interesse"
+              text="Ich entwickle mein Profil gezielt im Bereich Cloud Computing, DevOps und Infrastrukturautomatisierung weiter. Besonders spannend finde ich die Verbindung von Softwareentwicklung, Containerisierung, CI/CD und Cloud-Plattformen."
             />
 
             <div className="timeline">
@@ -281,12 +296,16 @@ export default function App() {
               <p className="section-eyebrow">Kontakt</p>
               <h2>Interesse an einer Zusammenarbeit?</h2>
               <p className="section-text">
-                Ich freue mich über Kontakt zu Werkstudentenstellen, spannenden
-                Projekten oder Entwicklungsmöglichkeiten im IT-Bereich.
+                Ich freue mich über Kontakt zu Werkstudentenstellen und Projekten
+                im Bereich Cloud, DevOps, Infrastrukturautomatisierung und
+                Softwareentwicklung.
               </p>
 
               <div className="contact-actions">
-                <a className="button button-primary" href="mailto:burakbeder1453@gmail.com">
+                <a
+                  className="button button-primary"
+                  href="mailto:burakbeder1453@gmail.com"
+                >
                   E-Mail schreiben
                 </a>
                 <a
@@ -339,7 +358,8 @@ export default function App() {
 
               <p className="legal-note">
                 Dies ist eine persönliche Portfolio- und Lebenslauf-Seite zur
-                Darstellung meiner Qualifikationen, Projekte und beruflichen Interessen.
+                Darstellung meiner Qualifikationen, Projekte und beruflichen
+                Interessen im Bereich Softwareentwicklung, Cloud und DevOps.
               </p>
             </div>
           </div>
