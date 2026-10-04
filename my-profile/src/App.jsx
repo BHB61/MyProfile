@@ -5,7 +5,6 @@ import {
   ArrowRight,
   Code2,
   Cloud,
-  GitBranch,
   Box,
   Terminal,
   MapPin,
@@ -40,47 +39,6 @@ function Intro({ label, title, children }) {
     </div>
   );
 }
-function CloudDiagram() {
-  return (
-    <div className="hero-card" aria-label="Mein Fokus: vom Code zur Cloud">
-      <div className="diagram-top">
-        <span>
-          <i className="live-dot" /> MEIN FOKUS
-        </span>
-        <span>01 / CLOUD & DEVOPS</span>
-      </div>
-      <div className="cloud-orbit">
-        <div className="orbit orbit-one" />
-        <div className="orbit orbit-two" />
-        <div className="cloud-core">
-          <Cloud size={64} strokeWidth={1.2} />
-          <span>Build. Deploy. Learn.</span>
-        </div>
-        <span className="orbit-label label-one">Infrastructure as Code</span>
-        <span className="orbit-label label-two">Continuous learning</span>
-      </div>
-      <div className="pipeline">
-        <div>
-          <GitBranch size={20} />
-          <span>Code</span>
-        </div>
-        <ArrowRight size={15} />
-        <div>
-          <Box size={20} />
-          <span>Build</span>
-        </div>
-        <ArrowRight size={15} />
-        <div>
-          <Cloud size={20} />
-          <span>Deploy</span>
-        </div>
-      </div>
-      <div className="diagram-bottom">
-        <Terminal size={14} /> Ideen entwickeln. Systeme verstehen.
-      </div>
-    </div>
-  );
-}
 export default function App() {
   usePortfolioMotion();
   return (
@@ -108,7 +66,15 @@ export default function App() {
         </div>
       </header>
       <main id="main">
-        <section className="hero-section">
+        <section className="hero-section portrait-hero">
+          <img
+            className="hero-portrait"
+            src="/burak-hero.jpg"
+            alt="Burak Hakki Beder im dunkelblauen Anzug vor einem hellen Studiohintergrund"
+            width="1536"
+            height="1024"
+            fetchPriority="high"
+          />
           <div className="container hero-grid">
             <div>
               <div className="hero-badge">
@@ -144,7 +110,6 @@ export default function App() {
                 </a>
               </div>
             </div>
-            <CloudDiagram />
           </div>
         </section>
         <div className="stack-strip">
