@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://my-profile-umber-tau.vercel.app/sitemap.xml
+Sitemap: https://burak-hakki-beder.vercel.app/sitemap.xml
