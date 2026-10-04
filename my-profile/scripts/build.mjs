@@ -12,7 +12,7 @@ try {
   const { default: App } = await server.ssrLoadModule("/src/App.jsx");
   const html = await readFile("dist/index.html", "utf8");
   const markup = renderToString(createElement(App));
-  if (!markup.includes("<h1>"))
+  if (!/<h1(?:\s|>)/.test(markup))
     throw new Error("Prerender did not produce the portfolio.");
   await writeFile(
     "dist/index.html",

@@ -1,3 +1,4 @@
+import TechRibbon from "./TechRibbon";
 import {
   DetailPopup,
   ScrollThread,
@@ -40,7 +41,15 @@ function Intro({ label, title, children }) {
   return (
     <div className="section-intro">
       <p className="eyebrow">{label}</p>
-      <h2>{title}</h2>
+      <h2 className="word-heading">
+        {title.split(" ").map((word, index) => (
+          <span className="word-mask" key={index}>
+            <span style={{ "--word-delay": `${index * 55}ms` }}>
+              {word}
+            </span>{" "}
+          </span>
+        ))}
+      </h2>
       <p>{children}</p>
     </div>
   );
@@ -84,12 +93,16 @@ export default function App() {
           />
           <div className="container hero-grid">
             <div>
-              <h1>
-                Von der Idee
-                <br />
-                zum Code.
-                <br />
-                <span>Bis in die Cloud.</span>
+              <h1 className="hero-title">
+                <span className="title-mask">
+                  <span>Von der Idee</span>
+                </span>
+                <span className="title-mask">
+                  <span>zum Code.</span>
+                </span>
+                <span className="title-mask title-accent">
+                  <span>Bis in die Cloud.</span>
+                </span>
               </h1>
               <p className="hero-text">
                 Ich bin Burak Hakki Beder. Informatikstudent an der HFT
@@ -115,22 +128,11 @@ export default function App() {
               </div>
             </div>
           </div>
+          <a className="hero-scroll-cue" href="#projekte">
+            ENTDECKEN <span aria-hidden="true">↓</span>
+          </a>
         </section>
-        <div className="stack-strip">
-          <div className="container">
-            <span>AKTUELL IM FOKUS</span>
-            {[
-              "Docker",
-              "Terraform",
-              "Microsoft Azure",
-              "GitLab CI/CD",
-              "React",
-              "KI-Systeme",
-            ].map((t) => (
-              <span key={t}>{t}</span>
-            ))}
-          </div>
-        </div>
+        <TechRibbon />
         <section id="projekte" className="section">
           <div className="container">
             <Intro
