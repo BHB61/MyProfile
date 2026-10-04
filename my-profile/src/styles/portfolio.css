@@ -1027,7 +1027,7 @@ nav > a:focus-visible::after {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 35%;
+  object-position: center top;
   z-index: -2;
 }
 .portrait-hero::after {
@@ -1063,7 +1063,7 @@ nav > a:focus-visible::after {
     min-height: 850px;
   }
   .hero-portrait {
-    object-position: center 28%;
+    object-position: center top;
   }
 }
 @media (max-width: 1000px) and (min-width: 761px) {
@@ -1115,7 +1115,7 @@ nav > a:focus-visible::after {
   @keyframes portrait-enter {
     from {
       opacity: 0.4;
-      transform: scale(1.035);
+      transform: translateY(8px);
     }
     to {
       opacity: 1;
@@ -1552,6 +1552,10 @@ button:focus-visible {
 @media (min-width: 1001px) and (prefers-reduced-motion: no-preference) {
   .hero-portrait {
     translate: 0 var(--portrait-shift, 0px);
-    scale: 1.06;
+    scale: 1;
   }
+}
+
+@media (min-width: 1001px) {
+  .hero-portrait { width: min(100%, 1440px); left: auto; right: 0; transform-origin: center top; }
 }
