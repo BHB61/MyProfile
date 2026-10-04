@@ -1,4 +1,5 @@
 import "./styles/portfolio.css";
+import { usePortfolioMotion } from "./usePortfolioMotion";
 import {
   ArrowUpRight,
   ArrowRight,
@@ -81,6 +82,7 @@ function CloudDiagram() {
   );
 }
 export default function App() {
+  usePortfolioMotion();
   return (
     <div id="top">
       <a className="skip-link" href="#main">
@@ -120,9 +122,10 @@ export default function App() {
                 <span>Bis in die Cloud.</span>
               </h1>
               <p className="hero-text">
-                Ich bin Burak. Informatikstudent an der HFT Stuttgart mit
-                Begeisterung für Cloud, DevOps und Softwareentwicklung. Ich
-                lerne am liebsten, indem ich Dinge baue.
+                Ich bin Burak Hakki Beder. Informatikstudent an der HFT
+                Stuttgart mit Begeisterung für Cloud, DevOps und
+                Softwareentwicklung. Ich lerne am liebsten, indem ich Dinge
+                baue.
               </p>
               <div className="actions">
                 <a className="button primary" href="#projekte">
