@@ -165,7 +165,7 @@ export default function App() {
                   <h3>{p.title}</h3>
                   <p>{p.description}</p>
                   <Tags items={p.tags} />
-                  <DetailPopup title={p.title} label="Projektdetails">
+                  <DetailPopup card title={p.title} label="Projektdetails">
                     {p.paragraphs.map((paragraph) => (
                       <p key={paragraph}>{paragraph}</p>
                     ))}
@@ -207,7 +207,7 @@ export default function App() {
                     <h3>{g.title}</h3>
                     <p>{g.description}</p>
                     <Tags items={g.items} />
-                    <DetailPopup title={g.title}>
+                    <DetailPopup card title={g.title}>
                       <p>{serviceDetails[g.title][0]}</p>
                       <h3>Damit beschäftige ich mich</h3>
                       <ul className="detail-list">

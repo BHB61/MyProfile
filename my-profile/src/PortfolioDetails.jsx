@@ -5,6 +5,7 @@ export function DetailPopup({
   label = "Mehr erfahren",
   children,
   className = "detail-trigger",
+  card = false,
 }) {
   const dialog = useRef(null);
   const previousOverflow = useRef(null);
@@ -24,7 +25,7 @@ export function DetailPopup({
   return (
     <>
       <button
-        className={className}
+        className={card ? "card-detail-trigger" : className}
         type="button"
         aria-haspopup="dialog"
         aria-label={`${label}: ${title}`}
@@ -34,8 +35,16 @@ export function DetailPopup({
           dialog.current.showModal();
         }}
       >
-        {label}
-        <ArrowUpRight size={16} />
+        {card ? (
+          <span className="card-hover-arrow" aria-hidden="true">
+            <ArrowUpRight size={21} />
+          </span>
+        ) : (
+          <>
+            {label}
+            <ArrowUpRight size={16} />
+          </>
+        )}
       </button>
       <dialog
         ref={dialog}

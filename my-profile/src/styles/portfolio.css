@@ -1557,5 +1557,93 @@ button:focus-visible {
 }
 
 @media (min-width: 1001px) {
-  .hero-portrait { width: min(100%, 1440px); left: auto; right: 0; transform-origin: center top; }
+  .hero-portrait {
+    width: min(100%, 1440px);
+    left: auto;
+    right: 0;
+    transform-origin: center top;
+  }
+}
+/* The whole card opens its details; separate website links stay independent. */
+.project-card,
+.tech-card {
+  position: relative;
+}
+.card-detail-trigger {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: inherit;
+  background: transparent;
+  cursor: pointer;
+  color: var(--accent);
+  padding: 0;
+}
+.card-detail-trigger:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 5px;
+}
+.card-hover-arrow {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #e7f0fd;
+  opacity: 0;
+  transform: translate(-5px, 5px);
+  transition:
+    opacity 0.25s,
+    transform 0.25s;
+}
+.project-card:hover .card-hover-arrow,
+.tech-card:hover .card-hover-arrow,
+.card-detail-trigger:focus-visible .card-hover-arrow {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+.project-card:hover .project-top > svg,
+.project-card:focus-within .project-top > svg {
+  opacity: 0;
+}
+.project-card > .text-link {
+  position: relative;
+  z-index: 2;
+}
+.tech-card {
+  padding: 27px 18px;
+  border-radius: 8px;
+  transition:
+    background 0.3s,
+    box-shadow 0.3s,
+    transform 0.3s,
+    opacity 0.75s;
+}
+.tech-card:hover,
+.tech-card:focus-within {
+  background: #fff;
+  box-shadow: 0 12px 35px -22px #3565ab55;
+}
+.tech-card h3 {
+  padding-right: 25px;
+}
+@media (hover: none) {
+  .card-hover-arrow {
+    opacity: 1;
+    transform: none;
+  }
+  .project-card .project-top > svg {
+    opacity: 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .card-hover-arrow {
+    transition: none;
+  }
 }
