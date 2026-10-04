@@ -1,0 +1,177 @@
+export const courseRecords = {
+  ai: {
+    slug: "ai",
+    width: 1191,
+    height: 1684,
+    sections: [
+      [
+        "Artificial Intelligence Literacy & Basics",
+        [
+          "Artificial Intelligence Basics",
+          "LLM",
+          "Generative AI",
+          "Natural Language Processing (NLP)",
+          "Prompt Engineering",
+        ],
+      ],
+      [
+        "General AI Models & Tools",
+        [
+          "ChatGPT",
+          "Claude",
+          "Gemini 2.0",
+          "Grok",
+          "DeepSeek R1",
+          "Llama 3.3 (Meta)",
+          "Google AI Studio",
+          "Qwen QwQ (Alibaba)",
+          "Perplexity",
+          "Microsoft Copilot",
+          "Bing AI",
+          "GitHub Copilot",
+          "Custom GPTs",
+          "Google Notebook LM",
+        ],
+      ],
+      [
+        "Image Creation Tools",
+        [
+          "Freepik",
+          "Ideogram",
+          "Imagen3",
+          "Dzine",
+          "Adobe Firefly",
+          "Krea AI",
+          "Cleanup Picture",
+          "Leonardo AI",
+          "Dall-E",
+          "Canva",
+          "Napkin AI",
+        ],
+      ],
+      [
+        "Video Creation Tools",
+        [
+          "KlingAI",
+          "OpenAI SORA",
+          "Hailuo AI",
+          "Synthesia",
+          "Rask AI",
+          "Pika Art",
+          "Runway ML",
+          "Heygen",
+        ],
+      ],
+      [
+        "Audio Creation & Other AI Tools",
+        [
+          "Elevenlabs",
+          "Sunomusic",
+          "Murf AI",
+          "Speechtexter",
+          "Play HT",
+          "VoiceMaker",
+          "Descript",
+          "MMAudio AI",
+          "Udio",
+          "Tome AI",
+          "Gamma AI",
+          "Notion",
+          "Napki AI",
+          "Grammarly",
+        ],
+      ],
+    ],
+    duration: "15 Stunden · 5-tägiges Programm",
+  },
+  devops: {
+    slug: "devops",
+    width: 1684,
+    height: 1191,
+    sections: [
+      [
+        "Fächer und Stunden laut Zertifikat",
+        [
+          "ITF — 15 h",
+          "Python — 30 h",
+          "Linux — 30 h",
+          "SDLC — 9 h",
+          "Git / GitHub — 9 h",
+          "SQL — 15 h",
+          "Network — 15 h",
+          "Windows Server — 15 h",
+          "AWS — 123 h",
+          "Docker — 18 h",
+          "Terraform — 18 h",
+          "Ansible — 18 h",
+          "Jenkins — 18 h",
+          "Kubernetes — 39 h",
+          "Prometheus / Grafana — 6 h",
+          "Internship Project — 90 h",
+          "Maven / Nexus — 6 h",
+          "Jira — 6 h",
+        ],
+      ],
+    ],
+    duration: "7-monatiges Programm",
+  },
+};
+export const serviceDetails = {
+  Frontend: [
+    "Mein Praxisfokus liegt auf responsiven Oberflächen mit React, JavaScript, HTML und CSS. Dabei interessieren mich klare Komponenten, verständliche Navigation und eine gute Darstellung auf Smartphone und Desktop.",
+    [
+      "Komponenten und Seiten strukturiert aufbauen",
+      "Daten aus APIs in Oberflächen einbinden",
+      "Responsive Layouts und verständliche Interaktionen gestalten",
+    ],
+  ],
+  Backend: [
+    "Ich beschäftige mich mit den Grundlagen serverseitiger Logik und der Verbindung zwischen Oberfläche und Daten. Node.js und REST-Schnittstellen gehören zu meinem Werkzeugkasten.",
+    [
+      "Anfragen und Antworten einer REST-API verstehen",
+      "Frontend und Backend über Schnittstellen verbinden",
+      "Fehlerfälle und Datenflüsse nachvollziehbar behandeln",
+    ],
+  ],
+  Database: [
+    "Relationale Datenbanken ergänzen meine Arbeit mit Webanwendungen. Mein Fokus liegt auf SQL-Grundlagen, strukturierten Daten und nachvollziehbaren Abfragen.",
+    [
+      "Tabellen und Beziehungen verstehen",
+      "Daten mit SQL abfragen und filtern",
+      "Datenmodelle passend zur Anwendung betrachten",
+    ],
+  ],
+  "Cloud & Systems": [
+    "Aus Praxisprojekten und meiner AWS-&-DevOps-Weiterbildung bringe ich Grundlagen in Cloud-Diensten und automatisierten Abläufen mit. Aktuell vertiefe ich Docker, Terraform, Azure und GitLab CI/CD.",
+    [
+      "Static Hosting mit S3 sowie EC2 und Auto Scaling",
+      "Containerisierung und Infrastructure as Code weiter vertiefen",
+      "Build-, Test- und Deployment-Abläufe verstehen",
+    ],
+  ],
+  "Betriebssysteme & Geräte": [
+    "Ich arbeite mit Linux und Windows und beschäftige mich praktisch mit Konfigurationen und Laptop-Setups. Mich interessiert, wie Systeme zuverlässig zusammenspielen.",
+    [
+      "Windows-Geräte einrichten und konfigurieren",
+      "Mit Linux-Systemen arbeiten",
+      "Systemtests durchführen und technische Anpassungen nachvollziehen",
+    ],
+  ],
+  "Office & Productivity": [
+    "Im Studien- und Projektalltag nutze ich Office-Anwendungen, um Informationen aufzubereiten und Ergebnisse verständlich zu dokumentieren.",
+    [
+      "Dokumente mit Word strukturieren",
+      "Daten mit Excel organisieren",
+      "Ergebnisse in PowerPoint präsentieren",
+    ],
+  ],
+  "KI-Systeme": [
+    "KI-Systeme sind ein besonderes Interesse von mir. Meine Weiterbildung zu AI Literacy und Content Creation bildet eine Grundlage; darauf möchte ich mit eigenen Experimenten und praktischen Anwendungen aufbauen.",
+    [
+      "LLMs, generative KI und Prompt Engineering besser verstehen",
+      "KI-gestützte Text-, Bild-, Video- und Audiowerkzeuge erkunden",
+      "Interesse an Assistenten, KI-Integration und automatisierten Workflows",
+      "Ergebnisse kritisch prüfen und Grenzen der Systeme verstehen",
+    ],
+  ],
+};

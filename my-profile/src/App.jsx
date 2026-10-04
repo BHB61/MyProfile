@@ -1,3 +1,9 @@
+import {
+  DetailPopup,
+  ScrollThread,
+  CertificateEvidence,
+} from "./PortfolioDetails";
+import { courseRecords, serviceDetails } from "./data/detailData";
 import "./styles/portfolio.css";
 import { usePortfolioMotion } from "./usePortfolioMotion";
 import {
@@ -43,6 +49,7 @@ export default function App() {
   usePortfolioMotion();
   return (
     <div id="top">
+      <ScrollThread />
       <a className="skip-link" href="#main">
         Zum Inhalt
       </a>
@@ -86,7 +93,7 @@ export default function App() {
               </h1>
               <p className="hero-text">
                 Ich bin Burak Hakki Beder. Informatikstudent an der HFT
-                Stuttgart mit Begeisterung für Cloud, DevOps und
+                Stuttgart mit Begeisterung für KI-Systeme, Cloud, DevOps und
                 Softwareentwicklung. Ich lerne am liebsten, indem ich Dinge
                 baue.
               </p>
@@ -118,6 +125,7 @@ export default function App() {
               "Microsoft Azure",
               "GitLab CI/CD",
               "React",
+              "KI-Systeme",
             ].map((t) => (
               <span key={t}>{t}</span>
             ))}
@@ -155,6 +163,25 @@ export default function App() {
                   <h3>{p.title}</h3>
                   <p>{p.description}</p>
                   <Tags items={p.tags} />
+                  <DetailPopup title={p.title} label="Projektdetails">
+                    <p>{p.description}</p>
+                    <h3>Technologien & Lernschwerpunkte</h3>
+                    <Tags items={p.tags} />
+                    <p className="project-context">
+                      {
+                        [
+                          "Bei diesem Webprojekt stehen eine responsive React-Oberfläche, eine klare Inhaltsstruktur und die Veröffentlichung einer realen Website im Mittelpunkt.",
+                          "Diese Praxisprojekte dienen dazu, AWS-Grundlagen anzuwenden: statische Inhalte mit S3 bereitstellen, EC2-Instanzen kennenlernen und das Prinzip von Auto Scaling verstehen.",
+                          "Hier geht es um praktische Gerätekonfigurationen und Systemtests: Windows-Laptops einrichten, Linux-Systeme kennenlernen und technische Anpassungen nachvollziehen.",
+                        ][i]
+                      }
+                    </p>
+                    {p.href && (
+                      <a className="text-link" href={p.href} {...external}>
+                        Website ansehen <ArrowUpRight size={16} />
+                      </a>
+                    )}
+                  </DetailPopup>
                   {p.href ? (
                     <a className="text-link" href={p.href} {...external}>
                       {p.linkLabel} <ArrowUpRight size={16} />
@@ -175,7 +202,8 @@ export default function App() {
             >
               Mein aktueller Schwerpunkt: Docker, GitLab CI/CD, Terraform und
               Azure. Dazu kommt eine breite Basis in Webentwicklung und
-              Systemen.
+              Systemen. Besonders interessieren mich außerdem KI-Systeme und
+              intelligente Workflows.
             </Intro>
             <div className="tech-grid">
               {techGroups.map((g) => {
@@ -186,6 +214,16 @@ export default function App() {
                     <h3>{g.title}</h3>
                     <p>{g.description}</p>
                     <Tags items={g.items} />
+                    <DetailPopup title={g.title}>
+                      <p>{serviceDetails[g.title][0]}</p>
+                      <h3>Damit beschäftige ich mich</h3>
+                      <ul className="detail-list">
+                        {serviceDetails[g.title][1].map((item) => (
+                          <li key={item}>{item}</li>
+                        ))}
+                      </ul>
+                      <Tags items={g.items} />
+                    </DetailPopup>
                   </article>
                 );
               })}
@@ -199,9 +237,9 @@ export default function App() {
               title="Technik verstehen. Dinge bewegen."
             >
               Mich begeistert die Verbindung von Softwareentwicklung,
-              Containerisierung und Cloud-Plattformen. Ich entwickle mein Profil
-              Schritt für Schritt weiter – mit Neugier, Eigeninitiative und
-              eigenen Praxisprojekten.
+              Containerisierung, KI-Systemen und Cloud-Plattformen. Ich
+              entwickle mein Profil Schritt für Schritt weiter – mit Neugier,
+              Eigeninitiative und eigenen Praxisprojekten.
             </Intro>
             <div className="timeline">
               {experience.map((e) => (
@@ -237,6 +275,12 @@ export default function App() {
                       <span className="issuer">{c.issuer}</span>
                       <p>{c.description}</p>
                       <Tags items={c.tags} />
+                      {c.record && (
+                        <CertificateEvidence
+                          record={courseRecords[c.record]}
+                          title={c.title}
+                        />
+                      )}
                     </div>
                   </article>
                 );

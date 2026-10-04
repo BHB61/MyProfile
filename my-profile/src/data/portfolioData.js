@@ -6,9 +6,17 @@ import {
   Monitor,
   FileSpreadsheet,
   Award,
+  Sparkles,
 } from "lucide-react";
 
 export const techGroups = [
+  {
+    title: "KI-Systeme",
+    icon: Sparkles,
+    description:
+      "Mein Interesse: intelligente Assistenten, generative KI und automatisierte Workflows.",
+    items: ["AI Literacy", "LLMs", "Prompt Engineering", "KI-Workflows"],
+  },
   {
     title: "Frontend",
     icon: Code2,
@@ -24,7 +32,8 @@ export const techGroups = [
   {
     title: "Database",
     icon: Database,
-    description: "Arbeit mit relationalen Datenbanken und strukturierten Daten.",
+    description:
+      "Arbeit mit relationalen Datenbanken und strukturierten Daten.",
     items: ["SQL", "Datenmodellierung", "Abfragen"],
   },
   {
@@ -58,7 +67,8 @@ export const techGroups = [
   {
     title: "Office & Productivity",
     icon: FileSpreadsheet,
-    description: "Sicherer Umgang mit typischen Office- und Produktivitätswerkzeugen.",
+    description:
+      "Sicherer Umgang mit typischen Office- und Produktivitätswerkzeugen.",
     items: ["MS Office", "Word", "Excel", "PowerPoint"],
   },
 ];
@@ -116,6 +126,7 @@ export const certificates = [
   },
   {
     title: "Artificial Intelligence Literacy and Content Creation Course",
+    record: "ai",
     issuer: "TechPro Education",
     date: "Issued: 24.01.2025",
     description:
@@ -125,6 +136,7 @@ export const certificates = [
   },
   {
     title: "AWS & DevOps Engineering Program",
+    record: "devops",
     issuer: "TechPro Education",
     date: "Issued: 11.06.2025",
     description:

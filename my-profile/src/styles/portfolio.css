@@ -1123,3 +1123,224 @@ nav > a:focus-visible::after {
     }
   }
 }
+button {
+  font: inherit;
+}
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 5px;
+}
+.detail-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  width: 100%;
+  border: 0;
+  border-top: 1px solid var(--line);
+  background: transparent;
+  color: var(--accent);
+  padding: 17px 0 0;
+  margin-top: 22px;
+  cursor: pointer;
+  font-size: 12px;
+  text-align: left;
+}
+.detail-trigger:hover {
+  color: #183e77;
+}
+.tech-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.tech-card > .tag-list {
+  margin-bottom: 5px;
+}
+.tech-card > .detail-trigger {
+  margin-top: auto;
+}
+.detail-dialog {
+  width: min(920px, calc(100% - 32px));
+  max-height: 88svh;
+  padding: 0;
+  border: 1px solid #dce5ef;
+  border-radius: 18px;
+  color: #202b3b;
+  background: #fff;
+  box-shadow: 0 35px 120px #182d4c40;
+}
+.detail-dialog::backdrop {
+  background: #172d4e66;
+  backdrop-filter: blur(7px);
+}
+.dialog-content {
+  padding: 34px;
+}
+.dialog-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  position: sticky;
+  top: -1px;
+  background: #fffffff5;
+  padding-block: 12px;
+  z-index: 2;
+}
+.dialog-heading h2 {
+  font-size: clamp(23px, 3vw, 34px);
+  overflow-wrap: anywhere;
+}
+.dialog-close {
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: #f7f9fc;
+  color: #243f61;
+  cursor: pointer;
+}
+.dialog-content > p {
+  margin-block: 20px;
+  font-size: 15px;
+}
+.dialog-content > h3 {
+  margin-top: 28px;
+  font-size: 18px;
+}
+.detail-list {
+  padding-left: 22px;
+  color: var(--muted);
+  line-height: 1.9;
+}
+.detail-list li {
+  padding-left: 5px;
+  margin-bottom: 8px;
+}
+.scroll-thread {
+  --progress: 0;
+  position: fixed;
+  z-index: 25;
+  left: 14px;
+  top: 24vh;
+  height: 52vh;
+  width: 3px;
+  border-radius: 5px;
+  background: #eddcdc;
+  pointer-events: none;
+}
+.scroll-thread span {
+  display: block;
+  height: 100%;
+  background: #bd5555;
+  border-radius: inherit;
+  transform: scaleY(var(--progress));
+  transform-origin: top;
+}
+.certificate > div {
+  min-width: 0;
+}
+.certificate-evidence {
+  margin-top: 26px;
+}
+.certificate-pages {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  margin-bottom: 22px;
+  align-items: start;
+}
+.certificate-pages figure {
+  margin: 0;
+  padding: 12px;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+.certificate-pages img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 3px;
+}
+.certificate-pages figcaption {
+  margin-top: 12px;
+  font-size: 12px;
+  color: var(--muted);
+}
+.certificate-enlarged {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-top: 20px;
+}
+.course-record {
+  margin: 28px 0 8px;
+  padding: 26px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+.course-record h4 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 550;
+}
+.course-columns {
+  columns: 2;
+  column-gap: 35px;
+}
+.course-columns section {
+  break-inside: avoid;
+}
+.course-columns h5 {
+  font-size: 13px;
+  margin: 20px 0 10px;
+  line-height: 1.5;
+  color: #365b8c;
+}
+.course-columns ul {
+  padding-left: 18px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.9;
+}
+@media (max-width: 760px) {
+  .scroll-thread {
+    left: 3px;
+    width: 2px;
+  }
+  .certificate-pages {
+    grid-template-columns: 1fr;
+  }
+  .certificate:has(.certificate-evidence) {
+    grid-template-columns: 1fr;
+  }
+  .course-columns {
+    columns: 1;
+  }
+  .course-record,
+  .dialog-content {
+    padding: 20px;
+  }
+  .dialog-heading {
+    gap: 12px;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .detail-dialog[open] {
+    animation: entrance 0.25s ease-out;
+  }
+}
+@media print {
+  .scroll-thread,
+  .detail-trigger {
+    display: none;
+  }
+}
+.detail-dialog .dialog-content > p { max-width: none; font-size: 15px; margin: 20px 0; }
