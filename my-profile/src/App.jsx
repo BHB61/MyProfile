@@ -77,9 +77,6 @@ export default function App() {
           />
           <div className="container hero-grid">
             <div>
-              <div className="hero-badge">
-                <i className="live-dot" /> Offen für Werkstudentenstellen
-              </div>
               <h1>
                 Von der Idee
                 <br />
