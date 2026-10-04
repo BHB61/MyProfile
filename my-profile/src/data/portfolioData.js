@@ -135,6 +135,7 @@ export const experience = [
 export const certificates = [
   {
     title: "Business English Skills (C1)",
+    record: "english",
     issuer: "Hochschule für Technik Stuttgart",
     date: "Wintersemester 2025/26 · 13.02.2026",
     description:

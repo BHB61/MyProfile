@@ -1,4 +1,23 @@
 export const courseRecords = {
+  english: {
+    slug: "english",
+    pages: [1],
+    width: 1191,
+    height: 1684,
+    duration: "2 ECTS · 60 Zeitstunden",
+    sections: [
+      [
+        "Business English Skills (C1)",
+        [
+          "Hochschule für Technik Stuttgart · International Office",
+          "Wintersemester 2025/26",
+          "Pflichtfach bei Mark Hyland",
+          "Erfolgreich abgeschlossen mit Note 2,0",
+          "Ausgestellt am 13.02.2026",
+        ],
+      ],
+    ],
+  },
   ai: {
     slug: "ai",
     width: 1191,

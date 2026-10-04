@@ -269,10 +269,23 @@ export default function App() {
                       <p>{c.description}</p>
                       <Tags items={c.tags} />
                       {c.record && (
-                        <CertificateEvidence
-                          record={courseRecords[c.record]}
-                          title={c.title}
-                        />
+                        <details className="certificate-dropdown">
+                          <summary
+                            aria-label={`Zertifikat anzeigen: ${c.title}`}
+                          >
+                            <span>Zertifikat & Nachweise</span>
+                            <span
+                              className="certificate-chevron"
+                              aria-hidden="true"
+                            >
+                              ⌄
+                            </span>
+                          </summary>
+                          <CertificateEvidence
+                            record={courseRecords[c.record]}
+                            title={c.title}
+                          />
+                        </details>
                       )}
                     </div>
                   </article>

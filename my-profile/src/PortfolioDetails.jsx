@@ -111,7 +111,7 @@ export function CertificateEvidence({ record, title }) {
   return (
     <div className="certificate-evidence">
       <div className="certificate-pages">
-        {[1, 2].map((page) => (
+        {(record.pages || [1, 2]).map((page) => (
           <figure key={page}>
             <img
               src={`/certificates/${record.slug}-${page}.jpg`}
@@ -151,7 +151,9 @@ export function CertificateEvidence({ record, title }) {
         Original-PDF öffnen <ArrowUpRight size={16} />
       </a>
       <div className="course-record">
-        <h4>Alle Kursinhalte</h4>
+        <h4>
+          {record.slug === "english" ? "Angaben zum Kurs" : "Alle Kursinhalte"}
+        </h4>
         <p>{record.duration} · Inhalte gemäß beigefügtem Nachweis.</p>
         <div className="course-columns">
           {record.sections.map(([heading, items]) => (
