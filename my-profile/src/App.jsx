@@ -58,7 +58,6 @@ export default function App() {
   usePortfolioMotion();
   return (
     <div id="top">
-      <ScrollThread />
       <a className="skip-link" href="#main">
         Zum Inhalt
       </a>
@@ -80,6 +79,7 @@ export default function App() {
             </a>
           </nav>
         </div>
+        <ScrollThread />
       </header>
       <main id="main">
         <section className="hero-section portrait-hero">
