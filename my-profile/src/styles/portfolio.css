@@ -1239,19 +1239,6 @@ button:focus-visible {
   border-radius: 0 4px 4px 0;
   box-shadow: 0 2px 9px #6099e635;
 }
-.scroll-thread::after {
-  content: "";
-  position: absolute;
-  left: clamp(5px, calc(var(--progress) * 100%), calc(100% - 5px));
-  top: 50%;
-  width: 7px;
-  height: 7px;
-  border: 2px solid #fff;
-  border-radius: 50%;
-  background: #3977c8;
-  box-shadow: 0 0 0 3px #7caff22b, 0 0 12px #6397dd80;
-  transform: translate(-50%, -50%);
-}
 .certificate > div {
   min-width: 0;
 }
