@@ -166,18 +166,9 @@ export default function App() {
                   <p>{p.description}</p>
                   <Tags items={p.tags} />
                   <DetailPopup title={p.title} label="Projektdetails">
-                    <p>{p.description}</p>
-                    <h3>Technologien & Lernschwerpunkte</h3>
-                    <Tags items={p.tags} />
-                    <p className="project-context">
-                      {
-                        [
-                          "Bei diesem Webprojekt stehen eine responsive React-Oberfläche, eine klare Inhaltsstruktur und die Veröffentlichung einer realen Website im Mittelpunkt.",
-                          "Diese Praxisprojekte dienen dazu, AWS-Grundlagen anzuwenden: statische Inhalte mit S3 bereitstellen, EC2-Instanzen kennenlernen und das Prinzip von Auto Scaling verstehen.",
-                          "Hier geht es um praktische Gerätekonfigurationen und Systemtests: Windows-Laptops einrichten, Linux-Systeme kennenlernen und technische Anpassungen nachvollziehen.",
-                        ][i]
-                      }
-                    </p>
+                    {p.paragraphs.map((paragraph) => (
+                      <p key={paragraph}>{paragraph}</p>
+                    ))}
                     {p.href && (
                       <a className="text-link" href={p.href} {...external}>
                         Website ansehen <ArrowUpRight size={16} />
